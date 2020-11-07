@@ -75,6 +75,7 @@ body.header-fixed.header-animated {
 }
 
 .lang-block {
+  position: relative;
   margin-right: 25px;
   font-size: 16px;
   font-weight: bold;
@@ -93,8 +94,22 @@ body.header-fixed.header-animated {
   .lang-list {
     display: none;
     position: absolute;
+    padding: 10px 20px;
     top: 42px;
-    left: 0;
+    left: -12px;
+    background: #f0f4f9;
+  }
+  &.active {
+    .lang-list {
+      display: block;
+      a {
+        display: block;
+        margin-bottom: 15px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 }
 

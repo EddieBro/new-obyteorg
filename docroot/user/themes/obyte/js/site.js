@@ -120,6 +120,14 @@ function mobileLang() {
   });
 }
 
+function langLogic() {
+  $('.current-lang').click(function (e) {
+    e.preventDefault();
+    document.querySelector('.lang-block').classList.toggle('active');
+  });
+
+}
+
 jQuery(document).ready(function($){
     scrollHeader();
 
@@ -166,6 +174,7 @@ jQuery(document).ready(function($){
     animationLogic();
     mobileLang();
     showHideMembers();
+    langLogic();
 });
 
 $(window).load(function(){
